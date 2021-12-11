@@ -1,32 +1,28 @@
-# Prerequisites
-*.d
+# https://github.com/github/gitignore/blob/master/Global/MicrosoftOffice.gitignore
+*.tmp
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Word temporary
+~$*.doc*
 
-# Precompiled Headers
-*.gch
-*.pch
+# Word Auto Backup File
+Backup of *.doc*
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Excel temporary
+~$*.xls*
 
-# Fortran module files
-*.mod
-*.smod
+# Excel Backup File
+*.xlk
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# PowerPoint temporary
+~$*.ppt*
 
-# Executables
-*.exe
-*.out
-*.app
+# Visio autosave temporary files
+*.~vsd*
+
+.env
+/venv/
+.idea/
+/.DS_Store
+/.ipynb_checkpoints/
+__pycache__/
+

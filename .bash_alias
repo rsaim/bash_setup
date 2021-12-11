@@ -1,0 +1,6 @@
+alias ipy3='ipython3'
+alias ipy='ipython3'
+alias pyrun='ipython3 --pdb'
+alias rp='realpath'
+alias gst='git status'
+alias gl='git log'
