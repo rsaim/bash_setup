@@ -24,7 +24,7 @@ HEROKU_AC_BASH_SETUP_PATH=/Users/saim/Library/Caches/heroku/autocomplete/bash_se
 
 # bash alias
 source ~/.bash_alias
-source /usr/local/bin/activate.sh
+# source /usr/local/bin/activate.sh
 
 export PYTHONPATH="${PYTHONPATH}:/Users/saim/computer_vision/datasets:/Users/saim/pyflyby/lib/python:"
 #export PROMPT_COMMAND='history -a'
@@ -76,3 +76,7 @@ completions () (
 export GREP_OPTIONS='--color=always'
 export GREP_COLOR='1;35;40'
 alias ic="ibmcloud"
+
+if [ ! -f "~/.bash_eternal_history" ]; then
+    ln -s ~/.bash_history ~/.bash_eternal_history
+fi
