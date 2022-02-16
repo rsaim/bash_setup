@@ -6,9 +6,6 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
-[user]
-	name = Saim Raza
-	email = saimorsaim@gmail.com
 [diff]
 	tool = meld
 [difftool]
