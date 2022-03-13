@@ -8,9 +8,6 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# export PS1="\n> \[$(tput sgr0)\]\[\033[38;5;51m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;10m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;141m\]\t\[$(tput sgr0)\]\[\033[38;5;15m\] \\w\$(__git_ps1 ' (%s)')\n\[$(tput sgr0)\]\[\033[38;5;13m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-
-# export PS1="\n> \[$(tput sgr0)\]\[\033[38;5;51m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;10m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;141m\]\t\[$(tput sgr0)\]\[\033[38;5;15m\]$(parse_git_branch)\n$ "
 export PS1="\n> \[\]\[\033[38;5;51m\]\u\[\]\[\033[38;5;15m\] \[\]\[\033[38;5;11m\]@ $(hostname)\[\]\[\033[38;5;15m\] \[\]\[\033[38;5;10m\]\w\[\]\[\033[38;5;15m\] \[\]\[\033[38;5;141m\]\t\[\]\[\033[38;5;15m\]\n\[$(tput sgr0)\]\[\033[38;5;13m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
@@ -19,15 +16,11 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 
-# heroku autocomplete setup
-HEROKU_AC_BASH_SETUP_PATH=/Users/saim/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
-
 # bash alias
 source ~/.bash_alias
 # source /usr/local/bin/activate.sh
 
 export PYTHONPATH="${PYTHONPATH}:/Users/saim/computer_vision/datasets:/Users/saim/pyflyby/lib/python:"
-#export PROMPT_COMMAND='history -a'
 
 # Eternal bash history.
 # ---------------------
@@ -43,7 +36,6 @@ export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-# PROMPT_COMMAND="history -s histappend; $PROMPT_COMMAND"
 
 # <TAB> completions
 completions () (
@@ -75,7 +67,6 @@ completions () (
 
 export GREP_OPTIONS='--color=always'
 export GREP_COLOR='1;35;40'
-alias ic="ibmcloud"
 
 if [ ! -f "~/.bash_eternal_history" ]; then
     ln -s ~/.bash_history ~/.bash_eternal_history
