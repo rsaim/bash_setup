@@ -1,7 +1,5 @@
 source ~/.git-prompt.sh
 
-export PATH="$PATH:/usr/local/smlnj/bin:/usr/local/Cellar/dosfstools/4.2/sbin"
-
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 parse_git_branch() {
@@ -18,7 +16,6 @@ alias ls='ls -GFh'
 
 # bash alias
 source ~/.bash_alias
-# source /usr/local/bin/activate.sh
 
 export PYTHONPATH="${PYTHONPATH}:/Users/saim/computer_vision/datasets:/Users/saim/pyflyby/lib/python:"
 
@@ -68,6 +65,6 @@ completions () (
 export GREP_OPTIONS='--color=always'
 export GREP_COLOR='1;35;40'
 
-if [ ! -f "~/.bash_eternal_history" ]; then
+if [ ! -f ~/.bash_eternal_history ]; then
     ln -s ~/.bash_history ~/.bash_eternal_history
 fi
