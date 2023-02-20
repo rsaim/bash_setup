@@ -4,3 +4,4 @@ alias pyrun='ipython3 --pdb'
 alias rp='realpath'
 alias gst='git status'
 alias gl='git log'
+alias clc="echo -en '\033c\033[3J'"
