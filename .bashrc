@@ -17,8 +17,6 @@ alias ls='ls -GFh'
 # bash alias
 source ~/.bash_alias
 
-export PYTHONPATH="${PYTHONPATH}:/Users/saim/computer_vision/datasets:/Users/saim/pyflyby/lib/python:"
-
 # Eternal bash history.
 # ---------------------
 # Undocumented feature which sets the size to "unlimited".
