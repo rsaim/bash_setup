@@ -60,7 +60,6 @@ completions () (
     printf "%s\n" "${COMPREPLY[@]}"
 )
 
-export GREP_OPTIONS='--color=always'
 export GREP_COLOR='1;35;40'
 
 if [ ! -f ~/.bash_eternal_history ]; then
