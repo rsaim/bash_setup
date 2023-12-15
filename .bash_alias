@@ -6,3 +6,4 @@ alias gst='git status'
 alias gl='git log'
 alias gco='git checkout'
 alias clc="echo -en '\033c\033[3J'"
+alias ll="ls -ltra"
