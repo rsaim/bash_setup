@@ -1,4 +1,7 @@
-source ~/.git-prompt.sh
+HOME_DIR_BASH=${OVERRIDDEN_HOME_DIR_BASH:-~}
+echo HOME_DIR_BASH="${HOME_DIR_BASH}"
+
+source ${HOME_DIR_BASH}/.git-prompt.sh
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
@@ -15,7 +18,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 
 # bash alias
-source ~/.bash_alias
+source ${HOME_DIR_BASH}/.bash_alias
 
 # Eternal bash history.
 # ---------------------
@@ -27,7 +30,7 @@ export HISTTIMEFORMAT="[%F %T] "
 HISTCONTROL=erasedups
 # Change the file location because certain bash sessions truncate .bash_history file upon close.
 # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
-export HISTFILE=~/.bash_eternal_history
+export HISTFILE=${HOME_DIR_BASH}/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
@@ -62,6 +65,6 @@ completions () (
 
 export GREP_COLOR='1;35;40'
 
-if [ ! -f ~/.bash_eternal_history ]; then
-    ln -s ~/.bash_history ~/.bash_eternal_history
+if [ ! -f ${HOME_DIR_BASH}/.bash_eternal_history ]; then
+    ln -s ${HOME_DIR_BASH}/.bash_history ${HOME_DIR_BASH}/.bash_eternal_history
 fi
