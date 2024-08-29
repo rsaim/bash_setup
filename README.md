@@ -3,8 +3,9 @@ Copy all the dot files from this repository into your home directory. Note that 
 ```
 cd bash_setup && cp ./{.bash*,.git-prompt.sh,.gitconfig,.vimrc} ~/
 ```
+Add `source ~/.bashrc` in `~/.profile`
 
-Configure keybindings for left/right arrows: https://stackoverflow.com/a/23963086/6463555
+#### Configure keybindings for left/right arrows: https://stackoverflow.com/a/23963086/6463555
 
 Set `OVERRIDDEN_HOME_DIR_BASH` to any directory to override home dir in the configs. This is helpful if you want to keep your history, alias files, etc. separate from other users on a shared machine. You don't need to copy the files to the home dir if youset the env var. However, you would need to source the `.bashrc` manually for every login.
 
